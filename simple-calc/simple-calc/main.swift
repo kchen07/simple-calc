@@ -69,10 +69,14 @@ while (!end) {
         }
         print(total / Double(array.count - 1))
     } else {
-        let first_val = UInt.init(array[0])!
-        for n in 1...first_val {
-            result *= Int(n)
+        if (array.count > 2) {
+            print("Fact can only have 1 number")
+        } else {
+            let first_val = UInt.init(array[0])!
+            for n in 1...first_val {
+                result *= Int(n)
+            }
+            print(result)
         }
-        print(result)
     }
 }
