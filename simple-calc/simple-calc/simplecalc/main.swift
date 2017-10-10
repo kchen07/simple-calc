@@ -48,6 +48,8 @@ while (!end) {
             res = first_val * second_val
         } else if (operation == "/") {
             res = first_val / second_val
+        } else if (operation == "%") {
+            res = Double(first_val.truncatingRemainder(dividingBy: Double(second_val)))
         } else {
             print ("Please type in valid operation")
         }
