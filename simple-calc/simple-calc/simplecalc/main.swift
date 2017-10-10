@@ -11,7 +11,7 @@ import Foundation
 var end = false
 
 while (!end) {
-    print("Enter an expression separated by returns:")
+    print("Enter an expression separated by returns: (type \"quit\" to end)")
     let input = readLine(strippingNewline: true)!
     var func_type = 0
     if (input.contains("count")) {
