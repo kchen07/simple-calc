@@ -53,27 +53,32 @@ while (!end) {
         } else {
             print ("Please type in valid operation")
         }
-        print(res)
+        print("result = \(res)")
         }
     } else if (func_type == 1) {
         var is_valid = true
-        for index in 0...(array.count-2) {
-            if (Int(array[index]) == nil) {
-                is_valid = false
+        if (array.count > 1) {
+            for index in 0...(array.count-2) {
+                if (Int(array[index]) == nil) {
+                    is_valid = false
+                }
             }
-        }
-        if (is_valid) {
-            print(array.count - 1)
+            if (is_valid) {
+                print(array.count - 1)
+            }
         }
     } else if (func_type == 2) {
         var total = 0.0
+        if (array.count > 1) {
         for index in 0...(array.count-2) {
             total += Double(array[index])!
         }
         print(total / Double(array.count - 1))
+        }
     } else {
-        if (array.count > 2) {
+        if (array.count != 2) {
             print("Fact can only have 1 number")
+            
         } else {
             let first_val = UInt.init(array[0])!
             for n in 1...first_val {
