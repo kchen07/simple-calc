@@ -1,6 +1,6 @@
 //
 //  main.swift
-//  simple-calc
+//  simplecalc
 //
 //  Created by Kelley Lu Chen on 10/9/17.
 //  Copyright © 2017 Kelley Lu Chen. All rights reserved.
@@ -30,12 +30,13 @@ while (!end) {
         continue
     }
     if (func_type == 0) {
-        if (Int(input) != nil) {
+        if (Int(input) != nil || Double(input) != nil) {
         var res = 0.0;
         let first_val = Double.init(input)!
         let operation = readLine(strippingNewline: true)!
         let input2 = readLine(strippingNewline: true)!
-        if (Int(input2) == nil) {
+        if (Int(input2) == nil &&  Double(input2) == nil) {
+            print("enter valid number")
             continue
         }
         let second_val = Double.init(input2)!
